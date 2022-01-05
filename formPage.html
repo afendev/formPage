@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="formStyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet">
+      <title>Feedback Maroto</title>
+</head>
+<header>
+  <h1 id="title">E aí, como foi?</h1>
+  <p id="description">
+    Estamos ansiosos para ouvir o que você tem a dizer.
+  </p>
+</header>
+<main>
+  <body>
+    
+    <form id="survey-form">
+      <label for="name">Nome</label>
+      <br>
+      <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name">
+      <br>
+      <label for="email">E-mail</label>
+      <br>
+      <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email">
+      <br>
+ 
+      <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
+      <br>
+      <input type="radio" id="yes-no"> Sim
+      <input type="radio" id="yes-no"> Não
+      <br>
+
+      <label for="grade" id="number">De 0 a 10, merecemos quanto?</label>
+      <br>
+      <input type="number" placeholder="0 a 10">
+      <br>
+      <select name="recursofavorito" id="dropdown">
+        <option disabled selected value>
+          O que você mais gosta?
+        </option>
+        <option value="qualidade das combinações">
+          Qualidade das combinações
+        </option>
+        <option value="agilidade nas combinações">
+          Agilidade nas combinações
+        </option>
+        <option value="facilidade de utilização">
+          Fácil de usar
+        </option>
+      </select>
+      <br>
+      <label for="checkboxes">E no geral, como foi o sentimento?</label>
+      <br>
+      <!--Lista com opções em dropdown para escolher-->
+      <input
+      type="checkbox"
+      name="horrivel"
+      id="checkboxes">
+      Frustração :'(
+      <br>
+      <input
+      type="checkbox"
+      name="entediante"
+      id="checkboxes">
+      Tédio :|
+      <br>
+      <input
+      type="checkbox"
+      name="normal"
+      id="checkboxes">
+      Tá na média :3
+      <br>
+      <input
+      type="checkbox"
+      name="divertida"
+      id="checkboxes">
+      Legal heim :)
+      <br>
+      <input type="checkbox" name="muito divertida" id="checkboxes">
+      Ótimo! *-*
+      <br>
+      <label for="message">Caixinha de sugestões, agradecimentos,
+        críticas construtivas...
+      </label>
+      <br>
+      <textarea name="user-message" id="message" cols="30" rows="10">
+      </textarea>
+      <br>
+      <br>
+      <input
+            id="submit"
+            type="submit"
+            value="Submit">
+    </form>
+    
+    
+  </body>
+</main>
+<footer>
+  <p class="afendevFooter">Feito com &hearts; por
+    <a class="afendevLink" target="_blank" href="https://github.com/afendev">
+      Afendev.
+    </a>
+  </p>
+</footer>
+
+</html>
