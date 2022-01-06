@@ -19,7 +19,7 @@
 <main>
   <body>
     
-    <form id="survey-form">
+    <form id="survey-form" class="form">
       <label for="name">Nome</label>
       <br>
       <input
@@ -36,21 +36,21 @@
             name="email"
             placeholder="Email">
       <br>
- 
+      <br>
       <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
       <br>
       <input type="radio" id="yes-no"> Sim
       <input type="radio" id="yes-no"> Não
       <br>
-
+      <br>
       <label for="grade" id="number">De 0 a 10, merecemos quanto?</label>
       <br>
       <input type="number" placeholder="0 a 10">
       <br>
-      <select name="recursofavorito" id="dropdown">
-        <option disabled selected value>
-          O que você mais gosta?
-        </option>
+      <br>
+      <label for="favorite-feature">O que você mais gosta?</label>
+      <br>
+      <select name="favorite-feature" id="dropdown">
         <option value="qualidade das combinações">
           Qualidade das combinações
         </option>
@@ -61,6 +61,7 @@
           Fácil de usar
         </option>
       </select>
+      <br>
       <br>
       <label for="checkboxes">E no geral, como foi o sentimento?</label>
       <br>
@@ -92,6 +93,7 @@
       <input type="checkbox" name="muito divertida" id="checkboxes">
       Ótimo! *-*
       <br>
+      <br>
       <label for="message">Caixinha de sugestões, agradecimentos,
         críticas construtivas...
       </label>
@@ -105,7 +107,112 @@
             type="submit"
             value="Submit">
     </form>
-    
+    <!--FORMULÁRIO ENCAPSULADO EM LI-->
+    <h2>Formulário encapsulado na tag 'li'</h2>
+
+    <form id="survey-form" class="form2">
+      <ul>
+      <li><label for="name">Nome</label>
+      <br>
+      <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"></li>
+      <li>
+        <label for="email">E-mail</label>
+          <br>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+            >
+      </li>
+      <br>
+      <li>
+        <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
+          <br>
+            <input
+              type="radio"
+              id="yes-no"
+            > Sim
+            <input 
+              type="radio"
+              id="yes-no"
+            > Não
+      </li>
+      <br>
+      <li>
+      <label for="grade" id="number">De 0 a 10, merecemos quanto?</label>
+      <br>
+      <input type="number" placeholder="0 a 10">
+      </li>
+      <br>
+      <li>
+        <label for="favorite-feature">O que você mais gosta?</label>
+        <br>
+        <select name="favorite-feature" id="dropdown">
+        <option value="qualidade das combinações">
+          Qualidade das combinações
+        </option>
+        <option value="agilidade nas combinações">
+          Agilidade nas combinações
+        </option>
+        <option value="facilidade de utilização">
+          Fácil de usar
+        </option>
+      </select>
+      </li>
+      <br>
+      <li>
+      <label for="checkboxes">E no geral, como foi o sentimento?</label>
+      <br>
+      <!--Lista com opções em dropdown para escolher-->
+      <input
+      type="checkbox"
+      name="horrivel"
+      id="checkboxes">
+      Frustração :'(
+      <br>
+      <input
+      type="checkbox"
+      name="entediante"
+      id="checkboxes">
+      Tédio :|
+      <br>
+      <input
+      type="checkbox"
+      name="normal"
+      id="checkboxes">
+      Tá na média :3
+      <br>
+      <input
+      type="checkbox"
+      name="divertida"
+      id="checkboxes">
+      Legal heim :)
+      <br>
+      <input type="checkbox" name="muito divertida" id="checkboxes">
+      Ótimo! *-*
+      <br>
+    </li>
+      <br>
+      <li><label for="message">Caixinha de sugestões, agradecimentos,
+        críticas construtivas...
+      </label>
+      <br>
+      <textarea name="user-message" id="message" cols="30" rows="10">
+      </textarea>
+    </li>
+      <br>
+      <br>
+      <input
+            id="submit"
+            type="submit"
+            value="Submit">
+      </ul>
+    </form>
     
   </body>
 </main>

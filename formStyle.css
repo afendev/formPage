@@ -3,5 +3,48 @@
 html {
   text-align: center;
   font-family: 'Bebas Neue', cursive;
+  background-color: cyan;
 }
 
+body {
+  display: grid;
+  justify-content: center;
+}
+
+.form {
+  background-color: darkorange;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 6px solid black;
+  border-radius: 3px;
+}
+
+.form2 {
+  background-color: greenyellow;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 30px;
+  border: 6px solid black;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+li:hover {
+  background-color: palegreen;
+  border-radius: 3px;
+}
+
+.afendevLink {
+  text-decoration: none;
+}
+
+.afendevLink:hover {
+  color: orange;
+  background-color: black;
+}
