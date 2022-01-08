@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="formStyle.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
-      rel="stylesheet">
-      <title>Feedback Maroto</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>Feedback Maroto</title>
 </head>
 <header>
   <h1 id="title">E aí, como foi?</h1>
@@ -17,81 +16,86 @@
   </p>
 </header>
 <main>
+
   <body>
-    
+
     <form id="survey-form" class="form">
-      <label for="name">Nome</label>
+      <label id="name-label" for="name">Nome</label>
       <br>
       <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name">
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Nome"
+        aria-label="Digite o seu nome"
+        required
+        minlength="3">
       <br>
-      <label for="email">E-mail</label>
+      <label
+        id="email-label" for="email">E-mail</label>
       <br>
       <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email">
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Digite o seu e-mail"
+        aria-label="Digite o seu email"
+        required>
       <br>
       <br>
       <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
       <br>
-      <input type="radio" id="yes-no"> Sim
-      <input type="radio" id="yes-no"> Não
+      <input type="radio" id="yes-no" value="yes-no=yes"> Sim
+      <input type="radio" id="yes-no" value="yes-no=no"> Não
       <br>
       <br>
-      <label for="grade" id="number">De 0 a 10, merecemos quanto?</label>
+      <label for="grade" id="number-label">De 0 a 10, merecemos quanto?</label>
       <br>
-      <input type="number" placeholder="0 a 10">
+      <input type="number" placeholder="Uns 8? :3" min="0" max="10">
       <br>
       <br>
-      <label for="favorite-feature">O que você mais gosta?</label>
+      <label for="favorite-feature">E no geral, como foi o sentimento?</label>
       <br>
       <select name="favorite-feature" id="dropdown">
-        <option value="qualidade das combinações">
-          Qualidade das combinações
+        <option value="frustation">
+          Frustração :'(
         </option>
-        <option value="agilidade nas combinações">
-          Agilidade nas combinações
+        <option value="tedious">
+          Tédio :|
         </option>
-        <option value="facilidade de utilização">
-          Fácil de usar
+        <option value="normal">
+          Tá na média :3
+        </option>
+        <option value="fun">
+          Legal heim :)
+        </option>
+        <option value="great">
+          Ótimo! *-*
         </option>
       </select>
       <br>
       <br>
-      <label for="checkboxes">E no geral, como foi o sentimento?</label>
+      <label for="checkboxes" aria-placeholder="O que mais gosta no jogo?">
+        O que você mais gosta?</label>
       <br>
       <!--Lista com opções em dropdown para escolher-->
-      <input
-      type="checkbox"
-      name="horrivel"
-      id="checkboxes">
-      Frustração :'(
+      <input type="checkbox" name="graphicquality" id="checkboxes">
+      Qualidade dos gráficos
       <br>
-      <input
-      type="checkbox"
-      name="entediante"
-      id="checkboxes">
-      Tédio :|
+      <input type="checkbox" name="0lag" id="checkboxes">
+      Não trava
       <br>
-      <input
-      type="checkbox"
-      name="normal"
-      id="checkboxes">
-      Tá na média :3
+      <input type="checkbox" name="easytoplay" id="checkboxes">
+      Fácil de jogar
       <br>
-      <input
-      type="checkbox"
-      name="divertida"
-      id="checkboxes">
-      Legal heim :)
+      <input type="checkbox" name="goodplot" id="checkboxes">
+      Bom plot
       <br>
-      <input type="checkbox" name="muito divertida" id="checkboxes">
-      Ótimo! *-*
+      <input type="checkbox" name="goodost" id="checkboxes">
+      Boa OST
+      <br>
+      <input type="checkbox" name="immersive" id="checkboxes">
+      Imersivo
       <br>
       <br>
       <label for="message">Caixinha de sugestões, agradecimentos,
@@ -102,118 +106,86 @@
       </textarea>
       <br>
       <br>
-      <input
-            id="submit"
-            type="submit"
-            value="Submit">
+      <input id="submit" type="submit" value="Submit">
     </form>
     <!--FORMULÁRIO ENCAPSULADO EM LI-->
     <h2>Formulário encapsulado na tag 'li'</h2>
 
     <form id="survey-form" class="form2">
       <ul>
-      <li><label for="name">Nome</label>
-      <br>
-      <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"></li>
-      <li>
-        <label for="email">E-mail</label>
+        <li><label for="name">Nome</label>
           <br>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-            >
-      </li>
-      <br>
-      <li>
-        <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
+          <input type="text" id="name" name="name" placeholder="Name">
+        </li>
+        <li>
+          <label for="email">E-mail</label>
           <br>
-            <input
-              type="radio"
-              id="yes-no"
-            > Sim
-            <input 
-              type="radio"
-              id="yes-no"
-            > Não
-      </li>
-      <br>
-      <li>
-      <label for="grade" id="number">De 0 a 10, merecemos quanto?</label>
-      <br>
-      <input type="number" placeholder="0 a 10">
-      </li>
-      <br>
-      <li>
-        <label for="favorite-feature">O que você mais gosta?</label>
+          <input type="email" id="email" name="email" placeholder="Email">
+        </li>
         <br>
-        <select name="favorite-feature" id="dropdown">
-        <option value="qualidade das combinações">
-          Qualidade das combinações
-        </option>
-        <option value="agilidade nas combinações">
-          Agilidade nas combinações
-        </option>
-        <option value="facilidade de utilização">
-          Fácil de usar
-        </option>
-      </select>
-      </li>
-      <br>
-      <li>
-      <label for="checkboxes">E no geral, como foi o sentimento?</label>
-      <br>
-      <!--Lista com opções em dropdown para escolher-->
-      <input
-      type="checkbox"
-      name="horrivel"
-      id="checkboxes">
-      Frustração :'(
-      <br>
-      <input
-      type="checkbox"
-      name="entediante"
-      id="checkboxes">
-      Tédio :|
-      <br>
-      <input
-      type="checkbox"
-      name="normal"
-      id="checkboxes">
-      Tá na média :3
-      <br>
-      <input
-      type="checkbox"
-      name="divertida"
-      id="checkboxes">
-      Legal heim :)
-      <br>
-      <input type="checkbox" name="muito divertida" id="checkboxes">
-      Ótimo! *-*
-      <br>
-    </li>
-      <br>
-      <li><label for="message">Caixinha de sugestões, agradecimentos,
-        críticas construtivas...
-      </label>
-      <br>
-      <textarea name="user-message" id="message" cols="30" rows="10">
+        <li>
+          <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
+          <br>
+          <input type="radio" id="yes-no"> Sim
+          <input type="radio" id="yes-no"> Não
+        </li>
+        <br>
+        <li>
+          <label for="grade" id="number">De 0 a 10, merecemos quanto?</label>
+          <br>
+          <input type="number" placeholder="0 a 10">
+        </li>
+        <br>
+        <li>
+          <label for="favorite-feature">O que você mais gosta?</label>
+          <br>
+          <select name="favorite-feature" id="dropdown">
+            <option value="qualidade das combinações">
+              Qualidade das combinações
+            </option>
+            <option value="agilidade nas combinações">
+              Agilidade nas combinações
+            </option>
+            <option value="facilidade de utilização">
+              Fácil de usar
+            </option>
+          </select>
+        </li>
+        <br>
+        <li>
+          <label for="checkboxes">E no geral, como foi o sentimento?</label>
+          <br>
+          <!--Lista com opções em dropdown para escolher-->
+          <input type="checkbox" name="horrivel" id="checkboxes">
+          Frustração :'(
+          <br>
+          <input type="checkbox" name="entediante" id="checkboxes">
+          Tédio :|
+          <br>
+          <input type="checkbox" name="normal" id="checkboxes">
+          Tá na média :3
+          <br>
+          <input type="checkbox" name="divertida" id="checkboxes">
+          Legal heim :)
+          <br>
+          <input type="checkbox" name="muito divertida" id="checkboxes">
+          Ótimo! *-*
+          <br>
+        </li>
+        <br>
+        <li><label for="message">Caixinha de sugestões, agradecimentos,
+            críticas construtivas...
+          </label>
+          <br>
+          <textarea name="user-message" id="message" cols="30" rows="10">
       </textarea>
-    </li>
-      <br>
-      <br>
-      <input
-            id="submit"
-            type="submit"
-            value="Submit">
+        </li>
+        <br>
+        <br>
+        <input id="submit" type="submit" value="Submit">
       </ul>
     </form>
-    
+
   </body>
 </main>
 <footer>
