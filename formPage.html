@@ -25,172 +25,212 @@
       <input
         type="text"
         id="name"
+        class="boxes"
         name="name"
         placeholder="Nome"
         aria-label="Digite o seu nome"
-        required
-        minlength="3">
+        minlength="3"
+        >
+      
       <br>
+      <br>
+      
       <label
         id="email-label" for="email">E-mail</label>
+      
       <br>
+      
       <input
         type="email"
         id="email"
+        class="boxes"
         name="email"
         placeholder="Digite o seu e-mail"
         aria-label="Digite o seu email"
-        required>
+        required
+        >
+      
       <br>
       <br>
-      <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
+      <!--O valor 'name' é o responsável por definir a união dos elementos no
+      formulário com input do tipo Radio. Dessa forma é possível produzir
+      a seleção única entre as opções disponíveis.-->
+      <legend>Gostou do nosso projeto?</legend>
       <br>
-      <input type="radio" id="yes-no" value="yes-no=yes"> Sim
-      <input type="radio" id="yes-no" value="yes-no=no"> Não
+        <!--É necessário utilizar espaço no documento HTML para que ele ocorra
+          entre o símbolo selecionado e o texto atribuído a ele.
+          Obs: Só funciona para dar um espaço (descolar opção marcada do texto)
+          Se quiser aumentar o espaçamento além disso deve ajustar no CSS.-->
+      <label for="yes">
+        <!--Eu estava em dúvida com relação a ordem a ser adotada na escrita
+        do meu documento e tentei pensar na perspectiva de alguém que está
+        acessando o documento pela primeira vez e constatei que as informações
+        mais importantes são:
+        1. O que é -> Input
+        2. Qual tipo de input? -> Radio
+        3. Qual o seu valor? -> Sim
+        4. Ele está estilizado?
+        5. Ele tem alguma id?
+      
+        Acredito que quando eu iniciar a utilização do JavaScript,
+        o atributo 'id' deverá ganhar maior importância e essa ordem
+        deverá sofrer alteração.-->
+      <input 
+        type="radio"
+        name="yes-no"  
+        value="yes"
+        class="cursorPointer"
+        id="radioButton"
+      > Sim</label>
+
+      <br>
+
+      <label for="no">
+      <input
+        type="radio"  
+        name="yes-no"
+        value="no"
+        class="cursorPointer"
+        id="radioButton"
+      > Não</label>
+     
       <br>
       <br>
+
       <label for="grade" id="number-label">De 0 a 10, merecemos quanto?</label>
+
       <br>
-      <input type="number" placeholder="Uns 8? :3" min="0" max="10">
+      <br>
+
+      <input
+        type="number"
+        placeholder="Uns 8? :3"
+        min="0"
+        max="10"
+        class="boxes"
+        id="number"
+      >
+
       <br>
       <br>
+
       <label for="favorite-feature">E no geral, como foi o sentimento?</label>
+      
       <br>
-      <select name="favorite-feature" id="dropdown">
-        <option value="frustation">
-          Frustração :'(
-        </option>
-        <option value="tedious">
-          Tédio :|
-        </option>
-        <option value="normal">
-          Tá na média :3
-        </option>
-        <option value="fun">
-          Legal heim :)
-        </option>
-        <option value="great">
-          Ótimo! *-*
-        </option>
+      <br>
+      
+      <select
+        name="favorite-feature"
+        class="boxes"
+        id="dropdown">
+        <option value="pickavalue">Escolha o sentimento</option>
+        <option value="frustation"> Frustração :'( </option>
+        <option value="tedious">  Tédio :| </option>
+        <option value="normal"> Tá na média :3 </option>
+        <option value="fun"> Legal heim :) </option>
+        <option value="great"> Ótimo! *-* </option>
       </select>
+      
       <br>
       <br>
+      
       <label for="checkboxes" aria-placeholder="O que mais gosta no jogo?">
-        O que você mais gosta?</label>
+        O que você mais gosta? Marque quantas quiser.
+      </label>
+      
       <br>
+      <br>
+      <!--É obrigatório criar 'label' em todas as perguntas do form?
+          Se for obrigatório, qual a utilidade disso?-->
       <!--Lista com opções em dropdown para escolher-->
-      <input type="checkbox" name="graphicquality" id="checkboxes">
-      Qualidade dos gráficos
+      <input
+        type="checkbox"
+        name="graphicquality"
+        value="graphicQuality"
+        id="checkboxes"
+      > Qualidade dos gráficos
+      
       <br>
-      <input type="checkbox" name="0lag" id="checkboxes">
-      Não trava
+      
+      <input
+        type="checkbox"
+        name="0lag"
+        value="noLag"
+        id="checkboxes"
+      > Não trava
+      
       <br>
-      <input type="checkbox" name="easytoplay" id="checkboxes">
-      Fácil de jogar
+      <!--Dúvida: É necessário colocar o termo escrito igual em 'name' e 'value' ?-->
+      
+      <input
+        type="checkbox"
+        name="easytoplay"
+        value="easyToPlay"
+        id="checkboxes"
+      > Fácil de jogar
+      
       <br>
-      <input type="checkbox" name="goodplot" id="checkboxes">
-      Bom plot
+      
+      <input
+        type="checkbox"
+        name="goodplot"
+        value="goodPlotTwist"
+        id="checkboxes"
+      > Bom plot twist
+      
       <br>
-      <input type="checkbox" name="goodost" id="checkboxes">
-      Boa OST
+      
+      <input
+        type="checkbox"
+        name="goodost"
+        value="goodOST"
+        id="checkboxes"
+      > Boa trilha sonora
+      
       <br>
-      <input type="checkbox" name="immersive" id="checkboxes">
-      Imersivo
+      
+      <input
+        type="checkbox"
+        name="immersive"
+        value="immersive"
+        id="checkboxes"
+      > Imersivo
+      
       <br>
       <br>
+      
       <label for="message">Caixinha de sugestões, agradecimentos,
         críticas construtivas...
       </label>
-      <br>
-      <textarea name="user-message" id="message" cols="30" rows="10">
-      </textarea>
+      
       <br>
       <br>
-      <input id="submit" type="submit" value="Submit">
-    </form>
-    <!--FORMULÁRIO ENCAPSULADO EM LI-->
-    <h2>Formulário encapsulado na tag 'li'</h2>
+      
+      <textarea
+        name="user-message"
+        cols="30" rows="8"
+        class="boxes"
+        id="message"
+      ></textarea>
+      
+      <br>
+      <br>
 
-    <form id="survey-form" class="form2">
-      <ul>
-        <li><label for="name">Nome</label>
-          <br>
-          <input type="text" id="name" name="name" placeholder="Name">
-        </li>
-        <li>
-          <label for="email">E-mail</label>
-          <br>
-          <input type="email" id="email" name="email" placeholder="Email">
-        </li>
-        <br>
-        <li>
-          <label for="radio" id="yes-no">Gostou do nosso projeto?</label>
-          <br>
-          <input type="radio" id="yes-no"> Sim
-          <input type="radio" id="yes-no"> Não
-        </li>
-        <br>
-        <li>
-          <label for="grade" id="number">De 0 a 10, merecemos quanto?</label>
-          <br>
-          <input type="number" placeholder="0 a 10">
-        </li>
-        <br>
-        <li>
-          <label for="favorite-feature">O que você mais gosta?</label>
-          <br>
-          <select name="favorite-feature" id="dropdown">
-            <option value="qualidade das combinações">
-              Qualidade das combinações
-            </option>
-            <option value="agilidade nas combinações">
-              Agilidade nas combinações
-            </option>
-            <option value="facilidade de utilização">
-              Fácil de usar
-            </option>
-          </select>
-        </li>
-        <br>
-        <li>
-          <label for="checkboxes">E no geral, como foi o sentimento?</label>
-          <br>
-          <!--Lista com opções em dropdown para escolher-->
-          <input type="checkbox" name="horrivel" id="checkboxes">
-          Frustração :'(
-          <br>
-          <input type="checkbox" name="entediante" id="checkboxes">
-          Tédio :|
-          <br>
-          <input type="checkbox" name="normal" id="checkboxes">
-          Tá na média :3
-          <br>
-          <input type="checkbox" name="divertida" id="checkboxes">
-          Legal heim :)
-          <br>
-          <input type="checkbox" name="muito divertida" id="checkboxes">
-          Ótimo! *-*
-          <br>
-        </li>
-        <br>
-        <li><label for="message">Caixinha de sugestões, agradecimentos,
-            críticas construtivas...
-          </label>
-          <br>
-          <textarea name="user-message" id="message" cols="30" rows="10">
-      </textarea>
-        </li>
-        <br>
-        <br>
-        <input id="submit" type="submit" value="Submit">
-      </ul>
+      <input
+        type="submit"
+        value="Enviar"
+        class="submit"
+        id="submit"
+      >
     </form>
-
   </body>
 </main>
 <footer>
   <p class="afendevFooter">Feito com &hearts; por
-    <a class="afendevLink" target="_blank" href="https://github.com/afendev">
+    <a
+      class="afendevLink"
+      target="_blank"
+      href="https://twitter.com/Afendev/">
       Afendev.
     </a>
   </p>
